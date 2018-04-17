@@ -1,0 +1,48 @@
+{
+  "title": "Person",
+  "type": "object",
+  "properties": {
+    "port": {
+      "type": "number",
+      "title": "Port",
+      "default": 2000
+    },
+    "broadcast": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "required": [
+    "broadcast"
+  ],
+  "dependencies": {
+    "broadcast": {
+      "oneOf": [
+        {
+          "properties": {
+            "broadcast": {
+              "enum": [
+                false
+              ]
+            }
+          }
+        },
+        {
+          "properties": {
+            "broadcast": {
+              "enum": [
+                true
+              ]
+            },
+            "hostname": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "hostname"
+          ]
+        }
+      ]
+    }
+  }
+}

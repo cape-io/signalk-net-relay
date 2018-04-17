@@ -1,0 +1,13 @@
+{
+  "extends": ["airbnb-base", "prettier/standard", "plugin:lodash-fp/recommended" ],
+  "env": {
+    "browser": false
+  },
+  "parserOptions": {
+     "ecmaVersion": 6
+   },
+  "rules": {
+    "semi": [ 2, "never" ]
+  },
+  "plugins": ["lodash-fp"],
+}
