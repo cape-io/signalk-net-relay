@@ -26,7 +26,11 @@
   },
   "dependencies": {
     "address": "^1.0.3",
+    "ajv": "^6.4.0",
+    "cape-lodash": "^1.13.2",
+    "cape-redux": "^3.2.0",
     "joi": "^13.1.2",
-    "lodash": "^4.17.5"
+    "lodash": "^4.17.5",
+    "redux": "^4.0.0"
   }
 }

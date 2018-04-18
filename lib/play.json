@@ -1,48 +1,68 @@
 {
-  "title": "Person",
-  "type": "object",
-  "properties": {
-    "port": {
-      "type": "number",
-      "title": "Port",
-      "default": 2000
+  "unidirectional": {
+    "credit_card": {
+      "ui:help": {
+        "type": "p",
+        "props": {
+          "children": [
+            "If you enter anything here then ",
+            {
+              "type": "code",
+              "props": {
+                "children": "billing_address"
+              },
+              "_owner": null
+            },
+            " will become required."
+          ]
+        },
+        "_owner": null
+      }
     },
-    "broadcast": {
-      "type": "boolean",
-      "default": false
+    "billing_address": {
+      "ui:help": "It’s okay to have a billing address without a credit card number."
     }
   },
-  "required": [
-    "broadcast"
-  ],
-  "dependencies": {
-    "broadcast": {
-      "oneOf": [
-        {
-          "properties": {
-            "broadcast": {
-              "enum": [
-                false
-              ]
-            }
-          }
-        },
-        {
-          "properties": {
-            "broadcast": {
-              "enum": [
-                true
-              ]
+  "items": {
+    "hostname": {
+      "ui:help": {
+        "type": "p",
+        "props": {
+          "children": [
+            "If you want to broadcast to the entire network try using ",
+            {
+              "type": "code",
+              "props": {
+                "children": "billing_address"
+              },
             },
-            "hostname": {
-              "type": "string"
-            }
-          },
-          "required": [
-            "hostname"
+            " for an IP address."
           ]
-        }
-      ]
+        },
+      }
+    },
+    "billing_address": {
+      "ui:help": {
+        "type": "p",
+        "key": null,
+        "ref": null,
+        "props": {
+          "children": [
+            "If you enter anything here then ",
+            {
+              "type": "code",
+              "key": null,
+              "ref": null,
+              "props": {
+                "children": "credit_card"
+              },
+              "_owner": null
+            },
+            " will become required."
+          ]
+        },
+        "_owner": null
+      }
     }
   }
 }
