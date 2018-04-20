@@ -6,7 +6,9 @@
   "author": "Kai Curry <kai@cape.io>",
   "license": "MIT",
   "keywords": [
-    "signalk-node-server-plugin"
+    "signalk",
+    "signalk-node-server-plugin",
+    "udp"
   ],
   "scripts": {
     "lint": "eslint src",
