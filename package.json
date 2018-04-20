@@ -2,7 +2,7 @@
   "name": "signalk-net-relay",
   "version": "1.0.0",
   "description": "Signal K Node Server plugin. Sends messages of specific event type to TCP/UDP IP Network destinations.",
-  "main": "index.js",
+  "main": "lib/index.js",
   "author": "Kai Curry <kai@cape.io>",
   "license": "MIT",
   "keywords": [
