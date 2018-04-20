@@ -1,3 +1,3 @@
-const { schema } = require('./schema')
+const { schema } = require('../lib/schema')
 
 console.log(JSON.stringify(schema, null, 2))
